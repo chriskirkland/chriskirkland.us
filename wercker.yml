@@ -1,0 +1,20 @@
+box: debian
+build:
+  steps:
+    - arjen/hugo-build:
+        version: "0.15"
+        theme: blackburn
+        flags: --buildDrafts=true
+deploy:
+  steps:
+    - install-packages:
+        packages: git ssh-client
+    - lukevivier/gh-pages@0.2.1:
+        token: $GIT_TOKEN
+        basedir: public
+git-copy-to-prod:
+  steps:
+    - leipert/git-push@0.7.6:
+        gh_oauth: $GIT_TOKEN
+        gh_pages: true
+        repo: chriskirkland/chriskirkland.github.io
