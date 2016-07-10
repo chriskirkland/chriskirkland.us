@@ -1,3 +1,3 @@
 # My Personal Webpage
 
-[![wercker status](https://app.wercker.com/status/c990c87f186e3b10d07683c2befc491b/m "wercker status")](https://app.wercker.com/project/bykey/c990c87f186e3b10d07683c2befc491b)
+[![wercker status](https://app.wercker.com/status/7c1ca53de4f5f0fe56bb5158ce1aaa94/m "wercker status")](https://app.wercker.com/project/bykey/7c1ca53de4f5f0fe56bb5158ce1aaa94)

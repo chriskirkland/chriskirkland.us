@@ -8,11 +8,11 @@ title = "About Me"
 
 My name is Chris Kirkland.
 
-I've lived on the East Coast of the US for the majority of my life (FL for 12 years, GA for 10 years, and NC for 3 years) but moved to Austin, TX in June 2015.  I have been married to my lovely wife Elizabeth since May 2012.
+I lived on the East Coast of the US for the majority of my life (FL for 12 years, GA for 10 years, and NC for 3 years) but moved to Austin, TX in June 2015.  I have been married to my lovely wife Elizabeth since May 2012.
 
 ### Software Engineer
 
-I'm an Engineer on the Cloud Foundation Services Performance Team.  Most of the time, I work on Nova/Heat/Keystone performance utilizing [Rally](https://wiki.openstack.org/wiki/Rally) as our primary benchmark harness.  However, I have spent some time doing performance work for the BlueMix AutoScale service.  I'm very interested in Software/Development Automation and have experience working with Ansible.  I am primarily a Python developer but I'm working on become proficient in Golang through side projects.
+I'm an Engineer on the Cloud Foundation Services Performance Team at IBM.  Most of the time, I work on Nova/Heat/Keystone performance utilizing [Rally](https://wiki.openstack.org/wiki/Rally) as our primary benchmark harness.  However, I have spent some time doing performance work for the BlueMix AutoScale service.  I'm very interested in Software/Development Automation and have experience working with Ansible.  I am primarily a Python developer but I'm working on become proficient in Golang through side projects.
 
 ### Math Nerd
 
