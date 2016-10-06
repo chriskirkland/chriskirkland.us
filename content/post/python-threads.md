@@ -54,7 +54,7 @@ if __name__ == '__main__':
 ```
 
 ```python
-$ python threading-example.py
+~$ python threading-example.py
 BadThreads are the different : False
 GoodThreads are the different : True
 ```

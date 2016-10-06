@@ -12,6 +12,7 @@ paginate = 5
   subtitle = "Software Engineer / Math Nerd / Barbershop Enthusiast"
   dateFormat = "02 Jan 2006"
   googleAnalytics = "UA-123-45"
+  highlightjs = "hybrid"
 
 [menu]
   # Shown in the side menu.

@@ -69,7 +69,9 @@ def simple(n):
 if __name__ == '__main__':
     LOG.info('Experiment #1')
     simple(5)
+```
 
+```
 ### logs
 33018 140735126266624 INFO: Experiment #1
 33018 4418879488 INFO: I'm thread 1
@@ -92,7 +94,9 @@ if __name__ == '__main__':
     LOG.info('Experiment #2')
     simple(5)
     simple(5)
+```
 
+```
 ### logs
 33018 140735126266624 INFO: Experiment #2
 33018 4418879488 INFO: I'm thread 1
@@ -123,7 +127,9 @@ def parallel(m, n):
     """ Spawns m processes with n threads each """
     procs = [Process(target=simple, args=(n,)) for ix in range(m)]
     [p.start() for p in procs]
+```
 
+```
 ### logs
 33018 140735126266624 INFO: Experiment #3
 33028 4414689280 INFO: I'm thread 0
