@@ -31,7 +31,7 @@ and a rule which governs how generations <i>evolve</i>.  Most common rules for C
 (i.e. surrounding cells).  For example, here is the 1D Cellular Automata [rule 30](http://mathworld.wolfram.com/Rule30.html):
 
 <center>
-  <img src="/CA-rule-30.gif" alt"CA rule 30" />
+  <img src="/cellular-automata/CA-rule-30.gif" alt"CA rule 30" />
 </center>
 
 Here the first "sub-rule" above states that if the current cell and both of its neighbors is active in current generation, the current cell will be inactive in the next generation.
@@ -53,7 +53,7 @@ However, inside of the rule visualization bar, cells with random states are repr
 Additionally there is a link to the [source code](https://github.com/chriskirkland/cellular-automata) in the top left of the webpage as well
 as a link to some [educational materials](https://github.com/chriskirkland/cellular-automata/wiki) in the footer.
 
-<img src="/cellular-automata-features.gif" alt="Cellular Automata demonstration" />
+<img src="/cellular-automata/cellular-automata-features.gif" alt="Cellular Automata demonstration" />
 
 Demo Gif created using [LICEcap](http://www.cockos.com/licecap/) for OSX.
 

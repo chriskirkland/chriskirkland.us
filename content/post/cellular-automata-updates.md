@@ -75,7 +75,7 @@ SASS_TO_DIR="css"
 <br/>
 Here is a quick screencap of the workflow in action:
 <center>
-  <img src="/cellular-automata-workflow.gif" alt="Cellular Automata Workflow" />
+  <img src="/cellular-automata-updates/cellular-automata-workflow.gif" alt="Cellular Automata Workflow" />
 </center>
 ## Takeaways
 
@@ -85,7 +85,9 @@ you can **deliver code more quickly** and you have **less code to maintain**.  B
 The biggest culprit in the original demo was the markup for the "rule visualizer" section; here is a side by side view of the original HTML and the new Pug code
 leveraging the (awesome!) `mixin` feature:
 
-<img src="/pug-vs-html-side-by-side.png" alt="Pug vs HTML comparison" />
+<center>
+  <img src="/cellular-automata-updates/pug-vs-html-side-by-side.png" alt="Pug vs HTML comparison" />
+</center>
 
 In conclusion, although a solid understand of HTML/CSS basic is requires for all would-be Web Developer, preprocessing tools like Pug and Sass should
 be in the repertoir of all developers who care about speed to deliver, efficiency, and maintainability.
