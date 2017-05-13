@@ -19,25 +19,32 @@ paginate = 5
   [[menu.main]]
     name = "Home"
     pre = "<i class='fa fa-home fa-fw'></i>"
-    weight = 0
     identifier = "home"
+    weight = 0
     url = "/"
   [[menu.main]]
     name = "Posts"
     pre = "<i class='fa fa-list fa-fw'></i>"
-    weight = 1
     identifier = "post"
+    weight = 1
     url = "/post/"
   [[menu.main]]
     name = "About"
     pre = "<i class='fa fa-user fa-fw'></i>"
-    weight = 2
     identifier = "about"
+    weight = 2
     url = "/about/"
+  [[menu.main]]
+    name = "Resume"
+    pre = "<i class='fa fa-paperclip fa-fw'></i>"
+    identifier = "resume"
+    weight = 3
+    url = "/resume.pdf"
   [[menu.main]]
     name = "Contact"
     pre = "<i class='fa fa-phone fa-fw'></i>"
-    weight = 3
+    identifier = "contact"
+    weight = 4
     url = "/contact/"
 
 [social]
