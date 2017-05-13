@@ -39,7 +39,7 @@ paginate = 5
     pre = "<i class='fa fa-paperclip fa-fw'></i>"
     identifier = "resume"
     weight = 3
-    url = "/resume.pdf"
+    url = "resume.pdf"
   [[menu.main]]
     name = "Contact"
     pre = "<i class='fa fa-phone fa-fw'></i>"
