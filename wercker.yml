@@ -12,7 +12,7 @@ build:
             git submodule init
             git submodule update
     - arjen/hugo-build:
-        version: "0.15"
+        version: "0.31"
         theme: blackburn
         flags: --buildDrafts=true
 deploy:

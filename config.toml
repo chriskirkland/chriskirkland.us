@@ -7,6 +7,10 @@ copyright = "&copy; 2016. All rights reserved"
 canonifyurls = true
 paginate = 5
 
+[indexes]
+  tag = "tags"
+  topic = "topics"
+
 [params]
   # Shown in the home page
   subtitle = "Software Engineer / Math Nerd / Barbershop Enthusiast"
@@ -20,31 +24,31 @@ paginate = 5
     name = "Home"
     pre = "<i class='fa fa-home fa-fw'></i>"
     identifier = "home"
-    weight = 0
+    weight = 1
     url = "/"
   [[menu.main]]
     name = "Posts"
     pre = "<i class='fa fa-list fa-fw'></i>"
     identifier = "post"
-    weight = 1
+    weight = 2
     url = "/post/"
   [[menu.main]]
     name = "About"
     pre = "<i class='fa fa-user fa-fw'></i>"
     identifier = "about"
-    weight = 2
+    weight = 3
     url = "/about/"
   [[menu.main]]
     name = "Resume"
     pre = "<i class='fa fa-paperclip fa-fw'></i>"
     identifier = "resume"
-    weight = 3
-    url = "resume.pdf"
+    weight = 4
+    url = "/resume.pdf"
   [[menu.main]]
     name = "Contact"
     pre = "<i class='fa fa-phone fa-fw'></i>"
     identifier = "contact"
-    weight = 4
+    weight = 5
     url = "/contact/"
 
 [social]
