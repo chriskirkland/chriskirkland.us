@@ -1,5 +1,6 @@
 +++
 date = "2016-06-20T08:52:25-05:00"
+draft = false
 next = "/next/path"
 prev = "/prev/path"
 title = "Welcome"

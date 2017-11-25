@@ -1,6 +1,7 @@
 +++
 date = "2016-06-20T09:16:51-05:00"
 description = ""
+draft = false
 tags = []
 title = "Python \"Thread-locality\""
 topics = ["Python", "threading.Thread"]

@@ -1,6 +1,7 @@
 +++
 date = "2016-09-26T11:09:19-05:00"
 description = "Demonstrating 1-dimensional Cellular Automata using JavaScript/HTML/CSS"
+draft = false
 tags = []
 title = "Cellular Automata"
 topics = ["Cellular Automata", "JavaScript", "HTML", "CSS", "Side Projects"]

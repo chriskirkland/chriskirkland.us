@@ -1,6 +1,7 @@
 +++
 date = "2017-05-11T16:06:56-05:00"
 description = "Bash Customization for Fun and Profit"
+draft = false
 tags = []
 title = "#!/bin/bash"
 topics = ["bash"]

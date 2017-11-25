@@ -1,6 +1,16 @@
 box: debian
 build:
   steps:
+    - script:
+        name: install git
+        code: |
+            apt-get update
+            apt-get install git -y
+    - script:
+        name: fetch theme sub module
+        code: |
+            git submodule init
+            git submodule update
     - arjen/hugo-build:
         version: "0.15"
         theme: blackburn
