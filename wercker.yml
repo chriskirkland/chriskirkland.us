@@ -14,7 +14,6 @@ build:
     - arjen/hugo-build:
         version: "0.31"
         theme: blackburn
-        flags: --buildDrafts=true
 deploy:
   steps:
     - install-packages:
