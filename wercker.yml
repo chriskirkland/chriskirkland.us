@@ -14,10 +14,38 @@ build:
     - arjen/hugo-build:
         version: "0.31"
         theme: blackburn
-deploy:
+ghpages-deploy:
   steps:
     - install-packages:
         packages: git ssh-client
     - lukevivier/gh-pages@0.2.1:
         token: $GIT_TOKEN
         basedir: public
+docker-build:
+  steps:
+    - internal/docker-push:
+      username: $DOCKER_USERNAME
+      password: $DOCKER_PASSWORD
+      tag: latest
+      repository: chriskirkland/website-hugo
+k8s-deploy:
+  steps:
+    - script:
+      name: install dependencies
+      code: |
+        apt-get update
+        apt-get install -y curl wget
+    - chriskirkland/ibm-containers-kubeconfig:
+      ic-cluster-name: "defnaut-your-cluster"
+      bx-username: "cmkirkla@us.ibm.com"
+    - script:
+      name: deploy to k8s cluster
+      code: |
+        # download kubectl...
+        curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+        chmod +x kubectl
+        mv kubectl /usr/local/bin/
+        # export kubeconfig...
+        export KUBECONFIG=$(readlink -f ~/.kube/admin-kubeconfig)
+        echo "KUBECONFIG=${KUBECONFIG}"
+        kubectl apply -f kubernetes/
