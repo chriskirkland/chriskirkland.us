@@ -22,7 +22,25 @@ ghpages-deploy:
         token: $GIT_TOKEN
         basedir: public
 docker-build:
+  box:
+    id: nginx
+    username: $DOCKER_USERNAME
+    password: $DOCKER_PASSWORD
+    tag: stable-alpine
   steps:
+    - script:
+      name: cleanup pipeline source
+      code: |
+        # copy over static content built by hugo
+        mv /pipeline/source/public /usr/share/nginx/html
+        # backup source files
+        mv /pipeline/source/wercker.yml /tmp/
+        mv /pipeline/source/kubernetes /tmp/
+        # delete the rest of the working directory
+        rm -rf /pipeline/source/*
+        # restore wercker.yml
+        cp /tmp/wercker.yml /pipeline/source/
+        mv /tmp/kubernetes /pipeline/source/
     - internal/docker-push:
       username: $DOCKER_USERNAME
       password: $DOCKER_PASSWORD
