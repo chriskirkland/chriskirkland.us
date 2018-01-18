@@ -32,7 +32,7 @@ docker-build:
       name: cleanup pipeline source
       code: |
         # copy over static content built by hugo
-        mv /pipeline/source/public /usr/share/nginx/html
+        mv /pipeline/source/public/* /usr/share/nginx/html
         # backup source files
         mv /pipeline/source/wercker.yml /tmp/
         mv /pipeline/source/kubernetes /tmp/
