@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bash Customization for Fun and Profit">
+  <meta name="generator" content="Hugo 0.31" />
+
+  <title>#!/bin/bash &middot; Chris Kirkland</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://chriskirkland.github.io/chriskirkland.us/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://chriskirkland.github.io/chriskirkland.us/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="https://chriskirkland.github.io/chriskirkland.us/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/hybrid.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="shortcut icon" href="https://chriskirkland.github.io/chriskirkland.us/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://chriskirkland.github.io/chriskirkland.us/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://chriskirkland.github.io/chriskirkland.us/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://chriskirkland.github.io/chriskirkland.us/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://chriskirkland.github.io/chriskirkland.us/resume.pdf"><i class='fa fa-paperclip fa-fw'></i>Resume</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://chriskirkland.github.io/chriskirkland.us/contact/"><i class='fa fa-phone fa-fw'></i>Contact</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://linkedin.com/in/chris-kirkland-44144621" target="_blank"><i class="fa fa-linkedin-square fa-fw"></i>LinkedIn</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/chriskirkland" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2016. All rights reserved</small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>#!/bin/bash</h1>
+  <h2>Bash Customization for Fun and Profit</h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>11 May 2017</time>
+  </div>
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-folder fa-fw"></i>
+    
+      <a class="post-taxonomy-topic" href="https://chriskirkland.github.io/chriskirkland.us/topics/bash">bash</a>
+    
+  </div>
+  
+  
+
+  
+  
+  
+  
+
+</div>
+
+  
+
+<h2 id="motivation">Motivation</h2>
+
+<p>My name is Chris, and I have a problem. <em>Hi, Chris.</em></p>
+
+<p>In all seriousness, I&rsquo;m not sure I would call it a <em>problem</em> but I am (admittedly) obsessive when it comes to efficiency in my every day life.
+Finding little ways to improve how quickly I can complete day-to-day tasks is a game that I constantly play.  I realized recently that my morning
+routine of making breakfast follows the general principles of least-constrained optimization: toast starts first,
+then tea, then coffee (<a href="https://www.amazon.com/Panasonic-NC-EH40PC-4-2-Quart-Temperature-Selector/dp/B0013O4DOG/ref=sr_1_4?ie=UTF8&amp;qid=1494557570&amp;sr=8-4&amp;keywords=japanese+kettle+instant">instant kettle FTW</a>)
+because tea has to steep and toast has to, well, toast which takes the longest.  If I mess up the order slightly, I don&rsquo;t go back and restart &ndash; because that&rsquo;s even more inefficient &ndash;
+but it <em>bothers</em> me.  In general, I think this obsessive focus on efficiency is a positive trait for the average person; though, it does mean one has to be intentional about slowing down and enjoying
+little things in life that aren&rsquo;t necessarily efficient or utilitarian.  On the other hand, I think it is an <em>extremely</em> useful trait for software engineers.</p>
+
+<p>Tasks that I have to do several times a day during work quickly get simplified, automated, or scripted in some way.  Typing the same command several times? Bash alias.  Need to pull down certs from
+remote machines that change frequently? Ansible.  Wasting time moving from typing to navigating via arrow keys or mouse/track pad in an IDE?  Vim.  <strong>Constantly checking for context about multiple
+pieces of software you interact with?  Add context to your bash prompt.</strong></p>
+
+<h2 id="my-new-prompt">My New Prompt</h2>
+
+<p>Here is what my bash prompt looks like these days:</p>
+
+<p><center>
+<img src="https://chriskirkland.github.io/chriskirkland.us/bash-customization/base-annotated.png" alt="bash prompt" />
+</center></p>
+
+<p>I&rsquo;ve had some of these &ldquo;sections&rdquo; for a while now but others are brand new, so I thought I&rsquo;d break down why they are there and what they do.  You can check out all of my
+<a href="https://github.com/chriskirkland/dotfiles">dotfiles</a> on Github.</p>
+
+<h3 id="1-execution-status">#1: Execution status</h3>
+
+<p>Whether it is running makefiles, automation scripts, or any command line utility, I like knowing the status of my previous command.  If I pipe some long combination of
+<code>cut</code>, <code>awk</code>, and <code>xargs</code> into a <code>grep -q</code>, I have no visual indication of whether or not I found a match.  Sure, I can just <code>echo $?</code>, but that requires effort.
+Instead, start my prompt with a &#x2714; if my last command succeeded and  &#x2718; if it failed:</p>
+
+<pre><code class="language-bash"># previous command exit code indicator
+if [ &quot;$?&quot; -eq 0 ]; then
+  PROMPT+=&quot;${Green}${CheckSym}${Color_Off} &quot;  # CheckSym=\u2714
+else
+  PROMPT+=&quot;${Red}${ExSym}${Color_Off} &quot;  # ExSym=\u2718
+fi
+</code></pre>
+
+<p><em>Note: this requires Bash &gt;= 4.2.</em></p>
+
+<p>Previously, I had the &#x2714; and &#x2718; with the previous command&rsquo;s index in my bash history, but that was extra information which crowded the prompt and I rarely ever used.</p>
+
+<h3 id="2-kubernetes-context">#2: Kubernetes context</h3>
+
+<p>As of a few months ago, I started in a new role at IBM working on the new Containers service based on Kubernetes.  What that means is, I regularly need to access
+multiple Kubernetes clusters on a daily basis for testing, debugging, and monitoring.  The normal work flow is to log into some node in the cluster and do whatever
+work you need; there are several problems with this:</p>
+
+<ol>
+<li>The hosts I need to log into change fairly regularly &ndash; new clusters are added, hosts are rotated in and out, etc.  This is minorly inconvenient, but we can solve the problem fairly easily with more automation.</li>
+<li>My bash &amp; vim customizations don&rsquo;t automatically come with me.  Again, this can be hacked through with automation, though things start to get more difficult.  But most importantly&hellip;</li>
+<li>I either have to manually format a big kubeconfig to manage all of the environments or deal with multiple kubeconfigs.  Dealing with multiple kubeconfigs worked fine up until I was working
+on 3 or 4 different environments daily.  Then I wanted to combine all of those kubeconfigs into one file.  But managing that file got old quickly.  So I automated the pulling and organization of that
+all-in-one kubeconfig.  Problem solved.</li>
+</ol>
+
+<p>But now I have the problem of context: I don&rsquo;t immediately know which cluster I&rsquo;m targetting.  No problem!  Add it to the prompt, and I can immediately identify which cluster
+I&rsquo;m targetting:</p>
+
+<pre><code class="language-bash">local kubernetes_context=$(kubectl config current-context 2&gt;&amp;1)
+if [[ &quot;$kubernetes_context&quot; =~ &quot;error: current-context is not set&quot; ]]; then
+  PROMPT+=&quot;${Dim}${HelmSym} (${NullSym})${Color_Off} &quot;  # HelmSym=\u2388; NullSym=\u2205
+else
+  PROMPT+=&quot;${LightBlue}${HelmSym} (${kubernetes_context})${Color_Off} &quot;
+fi
+</code></pre>
+
+<h3 id="3-git-context">#3: Git context</h3>
+
+<p>Similar to the problem in section #2 above, I hate manually checking which branch I have checked out locally and whether I have any staged/unstaged changes in my working directory.
+This git context section of the prompt shows <code>git_repo_name:(branch_name)</code> where branch name is color coded based on the git status:</p>
+
+<pre><code class="language-bash">local git_status=$(git status -unormal 2&gt;&amp;1)
+if [[ &quot;$git_status&quot; =~ nothing\ to\ commit ]]; then
+  local Color_On=$Green
+elif [[ &quot;$git_status&quot; =~ nothing\ added\ to\ commit\ but\ untracked\ files\ present ]]; then
+  local Color_On=$Purple
+else
+  local Color_On=$Red
+fi
+local remote=$(git config --get remote.origin.url)
+local repo=$(git config --get remote.origin.url | cut -d'/' -f2 | cut -d'.' -f1)  # default; ssh git source
+if echo $remote | grep -q https; then  # https git source
+  repo=$(git config --get remote.origin.url | cut -d'/' -f5 | cut -d'.' -f1)
+fi
+
+if [[ &quot;$git_status&quot; =~ On\ branch\ ([^[:space:]]+) ]]; then
+  local branch=${BASH_REMATCH[1]}
+else
+  # Detached HEAD. (branch=HEAD is a faster alternative.)
+  local branch=$(git describe --all --contains --abbrev=4 HEAD 2&gt; /dev/null || echo HEAD)
+fi
+# add the result to prompt
+PROMPT+=&quot;${repo}:(${Color_On}${branch}${Color_Off}) &quot;
+</code></pre>
+
+<p>If my current directory isn&rsquo;t in a git repo, just show the path to my current working directory.</p>
+
+<h3 id="4-bash-input-mode">#4: Bash input mode</h3>
+
+<p>This last addition is probably the simplest, but also my favorite of the list.  As I&rsquo;ve mentioned before, I do as much editing as possible in Vim.  I&rsquo;ve been primarily developing
+in Golang since started work my new role, and I wasn&rsquo;t able to bootstrap my Go-specific editing setup in Vim quickly enough to keep my development pace where I wanted it.
+So I was forced to an IDE (<em>cringe</em>).  But all is not lost&hellip; <a href="https://www.jetbrains.com/go/">Gogland</a> has a Vim mode!</p>
+
+<p>Anyway, getting used to movement in Vim has completely spoiled me w.r.t. ever other form of editing.  In particular, moving around quickly on the command line in bash
+has <em>always</em> been a painful experience for me.  Here&rsquo;s how things usually go: You build up some long chain of <code>grep ... | awk ... | grep ... | xargs</code> etc.  Suddenly, you
+realize you made a typo at the beginning of the line or you need to change some syntax slightly. What do you do?  Either mash the &#x2190; key or &lt;ESC&gt;+b until you get to where
+you want. But there has be a better way!  It took me far to long to find out that bash has an editing-mode which accepts either vi(m) or emacs.  So you can use beautiful vim movement
+commands or emacs death claws to jump wherever you want in the command.  In particular, you now get modal editing so I pretty-up the mode indicators to make them a bit more to my liking:</p>
+
+<pre><code class="language-bash">### ~/.inputrc
+set editing-mode vi
+set show-mode-in-prompt on
+set vi-ins-mode-string &quot;\1\e[0;96m\2(ins)\1\e[0m\2&quot;
+set vi-cmd-mode-string &quot;\1\e[0;32m\2(cmd)\1\e[0m\2&quot;
+</code></pre>
+
+<h3 id="demo">Demo</h3>
+
+<p>Here is an example demonstrating behavior of the prompt with respect to all of the aforementioned sections:</p>
+
+<p><center>
+<img src="https://chriskirkland.github.io/chriskirkland.us/bash-customization/modes-demo.png" alt="bash prompt modes demo" />
+</center></p>
+
+<p>Here is all the code for my prompt: <a href="https://gist.github.com/chriskirkland/7d78773618f26b4c7ff903887eb6c207">https://gist.github.com/chriskirkland/7d78773618f26b4c7ff903887eb6c207</a></p>
+
+<h3 id="bonus-alias-decorations">Bonus: Alias &ldquo;decorations&rdquo;</h3>
+
+<p>One of the problems with having a highly customized terminal/editing environment is that others can have trouble following what you are executing or how you are performing particular actions.
+This is particularly true when pair programming with less experienced developers or presenting to groups.  Practically, I could just type out any aliased commands in those contexts,
+but I find myself forgetting more than 50% of the time and being annoyed the remainder of the time.  Solution?  Print the underlying command for an alias any time it&rsquo;s run.  There was actually an example imbedded in the
+demo above where I ran aliases for <code>git status</code> and <code>git add</code>.</p>
+
+<p>Code: <a href="https://gist.github.com/chriskirkland/940725485b6774751d714272bce42a52">https://gist.github.com/chriskirkland/940725485b6774751d714272bce42a52</a></p>
+
+<p>The behavior of these decorations isn&rsquo;t where I&rsquo;d like them to be.  For instances, above I typed <code>ga foo</code> which is actually running <code>git add foo</code>.  However, the decoration
+only print the content of the alias, <code>git add</code>.  I prefer that it mimick <em>expanding</em> the alias and print both the underlying alias content and the trailing positional args.
+I&rsquo;ve made a few attempts to get that working&hellip; but it&rsquo;s proven to be a little tricky.  Always room for improvement :-)</p>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://chriskirkland.github.io/chriskirkland.us/post/cellular-automata-updates/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://chriskirkland.github.io/chriskirkland.us/post/cellular-automata-updates/">Cellular Automata (part 2)</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="next">
+      <a href="https://chriskirkland.github.io/chriskirkland.us/post/welcome/">Welcome</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+    <a href="https://chriskirkland.github.io/chriskirkland.us/post/welcome/"><i class="fa fa-chevron-right"></i></a>
+    
+  </div>
+</div>
+
+
+
+  
+
+</div>
+
+</div>
+</div>
+<script src="https://chriskirkland.github.io/chriskirkland.us/js/ui.js"></script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-123-45', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bash on Chris Kirkland</title>
+    <link>https://chriskirkland.github.io/chriskirkland.us/topics/bash/</link>
+    <description>Recent content in Bash on Chris Kirkland</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2016. All rights reserved</copyright>
+    <lastBuildDate>Thu, 11 May 2017 16:06:56 -0500</lastBuildDate>
+    
+	<atom:link href="https://chriskirkland.github.io/chriskirkland.us/topics/bash/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>#!/bin/bash</title>
+      <link>https://chriskirkland.github.io/chriskirkland.us/post/bash-customization/</link>
+      <pubDate>Thu, 11 May 2017 16:06:56 -0500</pubDate>
+      
+      <guid>https://chriskirkland.github.io/chriskirkland.us/post/bash-customization/</guid>
+      <description>Motivation My name is Chris, and I have a problem. Hi, Chris.
+In all seriousness, I&amp;rsquo;m not sure I would call it a problem but I am (admittedly) obsessive when it comes to efficiency in my every day life. Finding little ways to improve how quickly I can complete day-to-day tasks is a game that I constantly play. I realized recently that my morning routine of making breakfast follows the general principles of least-constrained optimization: toast starts first, then tea, then coffee (instant kettle FTW) because tea has to steep and toast has to, well, toast which takes the longest.</description>
+    </item>
+    
+  </channel>
+</rss>

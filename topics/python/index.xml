@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Chris Kirkland</title>
+    <link>https://chriskirkland.github.io/chriskirkland.us/topics/python/</link>
+    <description>Recent content in Python on Chris Kirkland</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2016. All rights reserved</copyright>
+    <lastBuildDate>Sun, 10 Jul 2016 20:27:18 -0500</lastBuildDate>
+    
+	<atom:link href="https://chriskirkland.github.io/chriskirkland.us/topics/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Python Thread IDs</title>
+      <link>https://chriskirkland.github.io/chriskirkland.us/post/python-thread-ids/</link>
+      <pubDate>Sun, 10 Jul 2016 20:27:18 -0500</pubDate>
+      
+      <guid>https://chriskirkland.github.io/chriskirkland.us/post/python-thread-ids/</guid>
+      <description>Python threading module and thread IDs In multithreaded Python applications, keeping up with what is happening in each thread can be nonintuitive.
+Context As a motivating example, consider the benchmark harness Rally. Rally makes heavy use of parallelism, through both the multiprocessing and threading Python modules, to provide concurrency for benchmarking. Consider a simple Rally scenario where the user wants to create a network, subnet, and boot a VM attached to that subnet.</description>
+    </item>
+    
+    <item>
+      <title>Python &#34;Thread-locality&#34;</title>
+      <link>https://chriskirkland.github.io/chriskirkland.us/post/python-threads/</link>
+      <pubDate>Mon, 20 Jun 2016 09:16:51 -0500</pubDate>
+      
+      <guid>https://chriskirkland.github.io/chriskirkland.us/post/python-threads/</guid>
+      <description>Python threading module and thread-local objects The __init__() body of Python threading.Threads runs in the main thread. Any Thread-local setup must be done inside of the threading.Thread.run() body; for example, SQLAlchemy`s thread-local scoped_session must be invoked inside of each thread to avoid conflicts/race conditions/etc.
+Here is a simple example:
+### threading-example.py (python 2.6+) from threading import Thread, current_thread class BadThread(Thread): def __init__(self): Thread.__init__(self) self.current_thread = current_thread() def run(self): pass class GoodThread(Thread): def __init__(self): Thread.</description>
+    </item>
+    
+  </channel>
+</rss>

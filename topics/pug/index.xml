@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pug on Chris Kirkland</title>
+    <link>https://chriskirkland.github.io/chriskirkland.us/topics/pug/</link>
+    <description>Recent content in Pug on Chris Kirkland</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2016. All rights reserved</copyright>
+    <lastBuildDate>Thu, 17 Nov 2016 11:22:53 -0500</lastBuildDate>
+    
+	<atom:link href="https://chriskirkland.github.io/chriskirkland.us/topics/pug/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Cellular Automata (part 2)</title>
+      <link>https://chriskirkland.github.io/chriskirkland.us/post/cellular-automata-updates/</link>
+      <pubDate>Thu, 17 Nov 2016 11:22:53 -0500</pubDate>
+      
+      <guid>https://chriskirkland.github.io/chriskirkland.us/post/cellular-automata-updates/</guid>
+      <description>Goal Around two months ago, I created a blog post for my weekend project demonstrating 1-dimensional Cellulator Automata; you can see that post here. Since then, I&amp;rsquo;ve started looking more into more current Web Development technologies including some of the videos from Travis Nielson&amp;rsquo;s fantastic youtube channel addressing topics in Web Development and full process design. Through those videos, I was introduced to the preprocessing/templating languages Pug (formerly Jade) and Sass for HTML and CSS, respectively.</description>
+    </item>
+    
+  </channel>
+</rss>

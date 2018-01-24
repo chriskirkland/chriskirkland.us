@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Topics on Chris Kirkland</title>
+    <link>https://chriskirkland.github.io/chriskirkland.us/topics/</link>
+    <description>Recent content in Topics on Chris Kirkland</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2016. All rights reserved</copyright>
+    <lastBuildDate>Thu, 11 May 2017 16:06:56 -0500</lastBuildDate>
+    
+	<atom:link href="https://chriskirkland.github.io/chriskirkland.us/topics/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Bash</title>
+      <link>https://chriskirkland.github.io/chriskirkland.us/topics/bash/</link>
+      <pubDate>Thu, 11 May 2017 16:06:56 -0500</pubDate>
+      
+      <guid>https://chriskirkland.github.io/chriskirkland.us/topics/bash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cellular Automata</title>
+      <link>https://chriskirkland.github.io/chriskirkland.us/topics/cellular-automata/</link>
+      <pubDate>Thu, 17 Nov 2016 11:22:53 -0500</pubDate>
+      
+      <guid>https://chriskirkland.github.io/chriskirkland.us/topics/cellular-automata/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Css</title>
+      <link>https://chriskirkland.github.io/chriskirkland.us/topics/css/</link>
+      <pubDate>Thu, 17 Nov 2016 11:22:53 -0500</pubDate>
+      
+      <guid>https://chriskirkland.github.io/chriskirkland.us/topics/css/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Html</title>
+      <link>https://chriskirkland.github.io/chriskirkland.us/topics/html/</link>
+      <pubDate>Thu, 17 Nov 2016 11:22:53 -0500</pubDate>
+      
+      <guid>https://chriskirkland.github.io/chriskirkland.us/topics/html/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Javascript</title>
+      <link>https://chriskirkland.github.io/chriskirkland.us/topics/javascript/</link>
+      <pubDate>Thu, 17 Nov 2016 11:22:53 -0500</pubDate>
+      
+      <guid>https://chriskirkland.github.io/chriskirkland.us/topics/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pug</title>
+      <link>https://chriskirkland.github.io/chriskirkland.us/topics/pug/</link>
+      <pubDate>Thu, 17 Nov 2016 11:22:53 -0500</pubDate>
+      
+      <guid>https://chriskirkland.github.io/chriskirkland.us/topics/pug/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://chriskirkland.github.io/chriskirkland.us/topics/python/</link>
+      <pubDate>Sun, 10 Jul 2016 20:27:18 -0500</pubDate>
+      
+      <guid>https://chriskirkland.github.io/chriskirkland.us/topics/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sass</title>
+      <link>https://chriskirkland.github.io/chriskirkland.us/topics/sass/</link>
+      <pubDate>Thu, 17 Nov 2016 11:22:53 -0500</pubDate>
+      
+      <guid>https://chriskirkland.github.io/chriskirkland.us/topics/sass/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Side Projects</title>
+      <link>https://chriskirkland.github.io/chriskirkland.us/topics/side-projects/</link>
+      <pubDate>Thu, 17 Nov 2016 11:22:53 -0500</pubDate>
+      
+      <guid>https://chriskirkland.github.io/chriskirkland.us/topics/side-projects/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Threading.thread</title>
+      <link>https://chriskirkland.github.io/chriskirkland.us/topics/threading.thread/</link>
+      <pubDate>Sun, 10 Jul 2016 20:27:18 -0500</pubDate>
+      
+      <guid>https://chriskirkland.github.io/chriskirkland.us/topics/threading.thread/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Web Development</title>
+      <link>https://chriskirkland.github.io/chriskirkland.us/topics/web-development/</link>
+      <pubDate>Thu, 17 Nov 2016 11:22:53 -0500</pubDate>
+      
+      <guid>https://chriskirkland.github.io/chriskirkland.us/topics/web-development/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

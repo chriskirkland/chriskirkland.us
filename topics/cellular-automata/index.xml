@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cellular Automata on Chris Kirkland</title>
+    <link>https://chriskirkland.github.io/chriskirkland.us/topics/cellular-automata/</link>
+    <description>Recent content in Cellular Automata on Chris Kirkland</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2016. All rights reserved</copyright>
+    <lastBuildDate>Thu, 17 Nov 2016 11:22:53 -0500</lastBuildDate>
+    
+	<atom:link href="https://chriskirkland.github.io/chriskirkland.us/topics/cellular-automata/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Cellular Automata (part 2)</title>
+      <link>https://chriskirkland.github.io/chriskirkland.us/post/cellular-automata-updates/</link>
+      <pubDate>Thu, 17 Nov 2016 11:22:53 -0500</pubDate>
+      
+      <guid>https://chriskirkland.github.io/chriskirkland.us/post/cellular-automata-updates/</guid>
+      <description>Goal Around two months ago, I created a blog post for my weekend project demonstrating 1-dimensional Cellulator Automata; you can see that post here. Since then, I&amp;rsquo;ve started looking more into more current Web Development technologies including some of the videos from Travis Nielson&amp;rsquo;s fantastic youtube channel addressing topics in Web Development and full process design. Through those videos, I was introduced to the preprocessing/templating languages Pug (formerly Jade) and Sass for HTML and CSS, respectively.</description>
+    </item>
+    
+    <item>
+      <title>Cellular Automata</title>
+      <link>https://chriskirkland.github.io/chriskirkland.us/post/cellular-automata/</link>
+      <pubDate>Mon, 26 Sep 2016 11:09:19 -0500</pubDate>
+      
+      <guid>https://chriskirkland.github.io/chriskirkland.us/post/cellular-automata/</guid>
+      <description>Inspiration It has been several years since I&amp;rsquo;ve touched any front-end web technologies. Past projects included:
+ Rebuilding the Mercer University Computer Science deparment website. Building a personal website for hosting syllabi, course materials, etc. while teaching in Grad school. This blog; built using Hugo which is technically cheating.  So recently I&amp;rsquo;ve been looking for an excuse to brush up on JavaScript, in particular. The inspiration for this side project came from this video from MPJ&amp;rsquo;s popular series &amp;ldquo;Fun Fun Function&amp;rdquo;; if you haven&amp;rsquo;t seen any of his videos already, shame on you.</description>
+    </item>
+    
+  </channel>
+</rss>

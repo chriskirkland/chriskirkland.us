@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.31" />
+
+  <title>Python Thread IDs &middot; Chris Kirkland</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://chriskirkland.github.io/chriskirkland.us/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://chriskirkland.github.io/chriskirkland.us/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="https://chriskirkland.github.io/chriskirkland.us/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/hybrid.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="shortcut icon" href="https://chriskirkland.github.io/chriskirkland.us/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://chriskirkland.github.io/chriskirkland.us/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://chriskirkland.github.io/chriskirkland.us/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://chriskirkland.github.io/chriskirkland.us/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://chriskirkland.github.io/chriskirkland.us/resume.pdf"><i class='fa fa-paperclip fa-fw'></i>Resume</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://chriskirkland.github.io/chriskirkland.us/contact/"><i class='fa fa-phone fa-fw'></i>Contact</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://linkedin.com/in/chris-kirkland-44144621" target="_blank"><i class="fa fa-linkedin-square fa-fw"></i>LinkedIn</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/chriskirkland" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2016. All rights reserved</small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>Python Thread IDs</h1>
+  <h2></h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>10 Jul 2016</time>
+  </div>
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-folder fa-fw"></i>
+    
+      <a class="post-taxonomy-topic" href="https://chriskirkland.github.io/chriskirkland.us/topics/python">Python</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-topic" href="https://chriskirkland.github.io/chriskirkland.us/topics/threading.thread">threading.Thread</a>
+    
+  </div>
+  
+  
+
+  
+  
+  
+  
+
+</div>
+
+  
+
+<h2 id="python-threading-module-and-thread-ids">Python <code>threading</code> module and thread IDs</h2>
+
+<p>In multithreaded Python applications, keeping up with what is happening in each thread can be nonintuitive.</p>
+
+<h3 id="context">Context</h3>
+
+<p>As a motivating example, consider the benchmark harness <a href="https://wiki.openstack.org/wiki/Rally">Rally</a>.
+Rally makes heavy use of parallelism, through both the <code>multiprocessing</code> and <code>threading</code> Python modules, to provide concurrency for benchmarking.
+Consider a simple Rally scenario where the user wants to create a network, subnet, and boot a VM attached to that subnet.  In general, this set of operations would comprise only one iteration.
+The scenario would consist of multiple iterations executing concurrently.  Let&rsquo;s assume we want to boot 100 VMs 20 at a time (i.e. &ldquo;concurrency&rdquo; in Rally).  Rally will execute iterations 20 at a time until all iterations are consumed from a queue.
+To achieve the concurrency, Rally spawns some number of process (8 by default) and multiplexes resource workers threads (equal to the concurrency) on those process with one iteration happening per thread.
+Because of the concurrency, the Rally logs are often difficult to decipher when errors come up.
+However, if one associates log entries with their thread ID, the logs become easier to to manage.</p>
+
+<p>However, we encountered collisions on the IDs of different threads in the Rally logs.
+For example, we noticed log entries from threads in different processes with the same thread IDs.  What remains of this blog is an investigation into that behavior.</p>
+
+<h3 id="threads-ids-are-non-unique">Threads IDs are non-unique</h3>
+
+<p>To get thread IDs as part of the log entries in your application, add the <a href="https://docs.python.org/2/library/logging.html#logrecord-attributes">LogRecord attribute</a> <code>%(thread)d</code> to your logHandler&rsquo;s pattern.  This attribute calls <a href="https://docs.python.org/2/library/threading.html#threading.Thread.ident">threading.Thread.ident</a> to generated the thread ID.
+Unfortunately, the Python documentation gives little on implementation details merely stating &ldquo;Thread identifiers may be recycled when a thread exits and another thread is created.&rdquo;
+Immediately, we see that thread IDs may be reused and are therefore non-unique.
+Unfortunately, the CPython source for the <code>threading</code> module imports the function <code>get_ident</code> which generates thread IDs from the module <code>thread</code>.
+Beyond the additional bit of documentation (e.g. &ldquo;Its [<code>thread.get_ident</code>] value has no direct meaning.&ldquo;), there is very little information available about this function&rsquo;s implementation.
+I was unable to find the source code for <code>thread</code> anywhere in the CPython source.</p>
+
+<p>In lieu of source code, I decided to write some small examples to corroborate the claims in the documentation and the behavior we experienced in the Rally logs.  In all of the code that follows, we use the following logging shell and <code>worker</code> function as a <code>Thread</code> target:</p>
+
+<pre><code class="language-python">import logging
+
+logging.basicConfig(level=logging.DEBUG,
+                    format='%(process)d %(thread)d %(levelname)s: %(message)s',
+                    )
+
+LOG = logging.getLogger(__name__)
+
+def worker(num):
+    time.sleep(0.5)  # ensure first Threads don't die before others spawn
+    LOG.info(&quot;I'm thread %d&quot; % num)
+</code></pre>
+
+<p>It&rsquo;s important to note the half second sleep in <code>worker</code> was necessary to make sure that all threads created &ldquo;together&rdquo; had a chance to come up before the first thread exited.</p>
+
+<h4 id="example-1-one-process-threads-together">Example #1:  One process, threads together</h4>
+
+<p>First, we create 5 threads in the <code>__main__</code> process all at once.  In this instance, all 5 threads start running before the first thread dies.</p>
+
+<pre><code class="language-python">### code
+from threading import Thread
+
+def simple(n):
+    &quot;&quot;&quot; Spawn n threads at once and wait for them to finish &quot;&quot;&quot;
+    threads = [Thread(target=worker, args=(ix,)) for ix in range(n)]
+    [t.start() for t in threads]
+    [t.join() for t in threads]
+
+
+if __name__ == '__main__':
+    LOG.info('Experiment #1')
+    simple(5)
+</code></pre>
+
+<pre><code>### logs
+33018 140735126266624 INFO: Experiment #1
+33018 4418879488 INFO: I'm thread 1
+33018 4423086080 INFO: I'm thread 2
+33018 4414672896 INFO: I'm thread 0
+33018 4427292672 INFO: I'm thread 3
+33018 4431499264 INFO: I'm thread 4
+</code></pre>
+
+<p>Notice all thread IDs are unique and were spawned by the same process.</p>
+
+<h4 id="example-2-one-process-10-threads-stagered">Example #2:  One process, 10 threads stagered</h4>
+
+<p>In this example, we allow 5 threads to come up, run, and exit before starting 5 more threads.</p>
+
+<pre><code class="language-python">### code
+if __name__ == '__main__':
+    ...
+    LOG.info('Experiment #2')
+    simple(5)
+    simple(5)
+</code></pre>
+
+<pre><code>### logs
+33018 140735126266624 INFO: Experiment #2
+33018 4418879488 INFO: I'm thread 1
+33018 4431499264 INFO: I'm thread 4
+33018 4427292672 INFO: I'm thread 3
+33018 4414672896 INFO: I'm thread 0
+33018 4423086080 INFO: I'm thread 2
+33018 4418879488 INFO: I'm thread 1
+33018 4414672896 INFO: I'm thread 0
+33018 4431499264 INFO: I'm thread 4
+33018 4427292672 INFO: I'm thread 3
+33018 4423086080 INFO: I'm thread 2
+</code></pre>
+
+<p>Notice again that all threads come from the same process.  However, the second set of threads have the same thread IDs as their counterparts in the first set.  So thread IDs are clearly being recycle, and, moreover, they are being assigned in the same order each time.</p>
+
+<h4 id="example-3-multiple-processes-threads-together">Example #3:  Multiple processes, threads together</h4>
+
+<p>In our final example, we introduce <code>multiprocessing.Process</code> to be in line with the motivation example with Rally.
+We spawn 3 process and, subsequently, 3 threads in each process.</p>
+
+<pre><code class="language-python">### code
+from multiprocessing import Process
+
+def parallel(m, n):
+    &quot;&quot;&quot; Spawns m processes with n threads each &quot;&quot;&quot;
+    procs = [Process(target=simple, args=(n,)) for ix in range(m)]
+    [p.start() for p in procs]
+</code></pre>
+
+<pre><code>### logs
+33018 140735126266624 INFO: Experiment #3
+33028 4414689280 INFO: I'm thread 0
+33028 4423102464 INFO: I'm thread 2
+33028 4418895872 INFO: I'm thread 1
+33030 4414689280 INFO: I'm thread 0
+33029 4418895872 INFO: I'm thread 1
+33030 4423102464 INFO: I'm thread 2
+33029 4423102464 INFO: I'm thread 2
+33029 4414689280 INFO: I'm thread 0
+33030 4418895872 INFO: I'm thread 1
+</code></pre>
+
+<p>Here we notice that the same thread IDs are assigned in order to the threads in each process.</p>
+
+<h3 id="conclusions">Conclusions</h3>
+
+<p>Though we weren&rsquo;t able to see the implementation details from thread IDs in Python&rsquo;s <code>threading</code> module, we can draw some conclusions:</p>
+
+<ul>
+<li><strong>Thread IDs are recycled.</strong> Example #2 corroborates the documentation&rsquo;s claim that thread IDs are available to be, and <em>are</em>, reused when the thread exits.</li>
+<li><strong>Thread IDs are generated in a cosistent manner.</strong> Example #2 shows that thread IDs are generated in the same order for the second set of thread IDs.</li>
+<li><strong>Thread ID generation happens indepently of the host process.</strong> Example #3 shows that thread IDs are generated exactly the same regardless of which process they live in.  Moreover, process IDs unique across processes.</li>
+</ul>
+
+<p>However, we can <em>partially</em> solve this problem with the following consideration: the uniqueness of <em>active</em> thread IDs in a given process, means that Threads are defined uniquely by process ID and thread ID together.</p>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://chriskirkland.github.io/chriskirkland.us/post/python-threads/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://chriskirkland.github.io/chriskirkland.us/post/python-threads/">Python &#34;Thread-locality&#34;</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="next">
+      <a href="https://chriskirkland.github.io/chriskirkland.us/post/cellular-automata/">Cellular Automata</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+    <a href="https://chriskirkland.github.io/chriskirkland.us/post/cellular-automata/"><i class="fa fa-chevron-right"></i></a>
+    
+  </div>
+</div>
+
+
+
+  
+
+</div>
+
+</div>
+</div>
+<script src="https://chriskirkland.github.io/chriskirkland.us/js/ui.js"></script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-123-45', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.31" />
+
+  <title>Python &#34;Thread-locality&#34; &middot; Chris Kirkland</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://chriskirkland.github.io/chriskirkland.us/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://chriskirkland.github.io/chriskirkland.us/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="https://chriskirkland.github.io/chriskirkland.us/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/hybrid.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="shortcut icon" href="https://chriskirkland.github.io/chriskirkland.us/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://chriskirkland.github.io/chriskirkland.us/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://chriskirkland.github.io/chriskirkland.us/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://chriskirkland.github.io/chriskirkland.us/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://chriskirkland.github.io/chriskirkland.us/resume.pdf"><i class='fa fa-paperclip fa-fw'></i>Resume</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://chriskirkland.github.io/chriskirkland.us/contact/"><i class='fa fa-phone fa-fw'></i>Contact</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://linkedin.com/in/chris-kirkland-44144621" target="_blank"><i class="fa fa-linkedin-square fa-fw"></i>LinkedIn</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/chriskirkland" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2016. All rights reserved</small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>Python &#34;Thread-locality&#34;</h1>
+  <h2></h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>20 Jun 2016</time>
+  </div>
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-folder fa-fw"></i>
+    
+      <a class="post-taxonomy-topic" href="https://chriskirkland.github.io/chriskirkland.us/topics/python">Python</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-topic" href="https://chriskirkland.github.io/chriskirkland.us/topics/threading.thread">threading.Thread</a>
+    
+  </div>
+  
+  
+
+  
+  
+  
+  
+
+</div>
+
+  
+
+<h2 id="python-threading-module-and-thread-local-objects">Python threading module and thread-local objects</h2>
+
+<p>The <code>__init__()</code> body of Python <code>threading.Threads</code> runs in the main thread.
+Any Thread-local setup must be done inside of the <code>threading.Thread.run()</code> body;
+for example, SQLAlchemy`s thread-local <a href="http://docs.sqlalchemy.org/en/latest/orm/contextual.html">scoped_session</a> must be invoked inside of each thread to avoid conflicts/race conditions/etc.</p>
+
+<p>Here is a simple example:</p>
+
+<pre><code class="language-python">### threading-example.py (python 2.6+)
+from threading import Thread, current_thread
+
+class BadThread(Thread):
+    def __init__(self):
+        Thread.__init__(self)
+        self.current_thread = current_thread()
+
+    def run(self):
+        pass
+
+class GoodThread(Thread):
+    def __init__(self):
+        Thread.__init__(self)
+
+    def run(self):
+        self.current_thread = current_thread()
+
+if __name__ == '__main__':
+    b1 = BadThread()
+    b2 = BadThread()
+    b1.start()
+    b2.start()
+    b1.join()
+    b2.join()
+    print 'BadThreads are the different : %s' % \
+          (b1.current_thread is not b2.current_thread)
+
+    g1 = GoodThread()
+    g2 = GoodThread()
+    g1.start()
+    g2.start()
+    g1.join()
+    g2.join()
+    print 'GoodThreads are the different : %s' % \
+          (g1.current_thread is not g2.current_thread)
+</code></pre>
+
+<pre><code class="language-python">~$ python threading-example.py
+BadThreads are the different : False
+GoodThreads are the different : True
+</code></pre>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="next">
+      <a href="https://chriskirkland.github.io/chriskirkland.us/post/python-thread-ids/">Python Thread IDs</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+    <a href="https://chriskirkland.github.io/chriskirkland.us/post/python-thread-ids/"><i class="fa fa-chevron-right"></i></a>
+    
+  </div>
+</div>
+
+
+
+  
+
+</div>
+
+</div>
+</div>
+<script src="https://chriskirkland.github.io/chriskirkland.us/js/ui.js"></script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-123-45', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+
+
+</body>
+</html>
+
